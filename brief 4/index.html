@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicode_Clubs</title>
+    <script src="https://kit.fontawesome.com/1e702862f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="navbar">
+
+            <img src="images/ofppt-logo.svg" id="ofppt-logo" alt="ofppt-logo" title="ofppt-logo">
+            <img src="images/logo-solicode.svg" class="Solicode_logo" alt="Solicode_logo" title="Solicode_logo">
+            <nav>
+
+                <ul>
+
+                    <li>ACCUEIL</li>
+                    <li>SOLICODE</li>
+                    <li>FORMATION</li>
+                    <li>INSCRIPTION</li>
+                    <li>CLUBS</li>
+                    <li>CONTACT</li>
+
+                </ul>
+
+            </nav>
+            
+        </div>
+        <hr>
+
+        <div id="header_2">
+
+            <p>Les activités parascolaires jouent un rôle primordial dans l’épanouissement des
+            apprenants. En effet, elles permettent de créer des espaces d’échange, de partage
+            et de consolidation de connaissances et des compétences dans différents domaines.
+            Dans ce contexte, Solicode interpelle ses apprenants pour participer dans des clubs
+            appartenant aux centres d’intérêt variés.</p>
+
+            <div id="header_img">
+                <img src="images/musique_club.jpg" alt="header_img" title="header_img">
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h1>JE M'INSCRIRS!</h1>
+
+            <form>
+
+                <div id="info_name">
+                    <div class="info">
+                        <label class="nom" for="nom">Nom</label><br>
+                        <input type="text" id="nom" name="info">
+                    </div>
+                    <div class="info">
+                        <label class="prenom" for="prenom">Prenom</label><br>
+                        <input type="text" id="prenom" name="info"><br><br>
+                    </div>
+                </div>
+                <div id="info_email">
+                    <label class="email" for="email">Email</label><br>
+                    <input type="text" id="email" name="info"><br><br>
+                </div>
+
+                <span id="genre">genre</span><br>
+                <div id="genre_input">
+                    <div  class="genre">
+                        <input type="radio" id="male" name="genre" value="male" checked>
+                        <label for="male">male</label>
+                    </div>
+                    <div  class="genre">
+                        <input type="radio" id="femme" name="genre" value="femme" >
+                        <label for="femme">femme</label><br>
+                    </div>
+                </div>
+
+                <div id="section">
+
+                    <div  id="Filiers">
+
+                    <span id="filier">Filier</span><br>
+
+                    <select id="filiers" name="filiers" onchange="myChange()">
+
+                        <option disabled hidden selected >choisir</option>
+                        <option value="Web">Web</option>
+                        <option value="Mobile">Mobile</option>
+
+                    </select>
+
+
+                    </div>
+
+                    <div id="groupes">
+
+                        <span id="groupe">Groupes</span><br>
+
+                        <select id="group" name="group">
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <span id="clubs">clubs</span><br>
+                <div class="clubs">
+                    <div id="clubs_1">
+                        <input type="checkbox" id="ia" name="clubs" value="ia">
+                        <label for="ia">IA</label>
+                    </div>
+                    <div id="clubs_2">
+                        <input type="checkbox" id="musique" name="clubs" value="musique">
+                        <label for="musique">Musique</label>
+                    </div>
+                </div>
+
+                <div class="clubs">
+                    <div id="clubs_3">
+                        <input type="checkbox" id="hackathon" name="clubs" value="hackathon">
+                        <label for="hackathon">Hackathon</label>
+                    </div>
+                    <div id="clubs_4">
+                        <input type="checkbox" id="sport" name="clubs" value="sport">
+                        <label for="sport">Sport</label><br>
+                    </div>
+                </div>
+
+                <div id="output"></div>
+                
+                <button type="button" id="button" onclick="myFunction()">Ajouter</button>
+                <button type="reset" id="reset">Annuler</button>
+
+            </form>
+
+            <table id="myTable">
+                        
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Filier</th>
+                        <th>Groupe</th>
+                        <th>clubs</th>
+                    </tr>
+                            
+                </thead>
+                        
+            </table>
+
+        </section>
+
+        <section id="Statistiques">
+
+            <h1>Statistiques</h1>
+
+            <div id="stat">
+                <div id="boxs_1">
+                    <span>Total <br>D’inscription</span>
+                    <div id="box_1"><span id="box_1_text">0</span></div>
+                </div>
+                <div>
+                    <div id="boxs_2">
+                        <span>Male/femme</span>
+                        <div id="box_2">
+                        <span id="box_2_1_text">0M</span>
+                        <span id="box_2_2_text">0F</span>
+                    </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="boxs_3">
+                        <span>IA</span>
+                        <div id="box_3"><span id="box_3_text">0</span></div>
+                    </div>
+                </div>
+                <div>
+                    <div id="boxs_4">
+                        <span>hackathon</span>
+                        <div id="box_4"><span id="box_4_text">0</span></div>
+                    </div>
+                </div>
+                <div>
+                    <div id="boxs_5">
+                        <span>musique</span>
+                        <div id="box_5"><span id="box_5_text">0</span></div>
+                    </div>
+                </div>
+                <div>
+                    <div id="boxs_6">
+                        <span>sport</span>
+                        <div id="box_6"><span id="box_6_text">0</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <img src="images/Solicode_logo.svg" class="Solicode_logo" alt="Solicode_logo" title="Solicode_logo">
+        <span id="Copyrights">Copyrights © 2021 All Rights Reserved by SoliCode.</span>
+        <i class="fa-brands fa-facebook-f fa-2x"></i>
+        <i class="fa-brands fa-linkedin fa-2x"></i>
+        <i class="fa-brands fa-instagram fa-2x"></i>
+        <span id="ofppt">@ofppt.ma.</span>
+    </footer>
+
+    <script src="my_script.js"></script>
+
+</body>
+
+</html>
